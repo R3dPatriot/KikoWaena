@@ -3,15 +3,17 @@
 
 class Photo
 {
-    private $path;
-    private $name;
-    private $size;
+    //To enter on user input
+    private $path; //Check
+    private $name; //Check
+    private $description; //Nope
+    //Hidden for the user
+    private $author; //Hidden nope
+    private $date; //Hidden nope
+    private $size; //Useless
+    //For admin only
     private $status;
     private $isCensored;
-    private $description;
-    private $author;
-    private $date;
-    private $tags;
 
     public function getPath()
     {
