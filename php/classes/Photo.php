@@ -3,56 +3,75 @@
 
 class Photo
 {
-    //To enter on user input
-    private $path; //Check
-    private $name; //Check
-    private $description; //Nope
-    //Hidden for the user
-    private $author; //Hidden nope
-    private $date; //Hidden nope
-    private $size; //Useless
-    //For admin only
-    private $status;
-    private $isCensored;
+    //Attributes
+    private $idImage;
+    private $idAuteur;
+    private $titre;
+    private $nomAuteur;
+    private $prenomAuteur;
+    private $nbLikes;
+    private $nbDislikes;
+    private $listeCommentaires;
+    private $listeAlbums;
 
-    public function getPath()
-    {
-        return $this->path;
+    //Constructors
+    public function __construct($idImage=NULL, $idAuteur=NULL, $titre='defaultTitle', $nomAuteur='defaultSurname', $prenomAuteur='defaultFirstName', $nbLikes=0, $nbDislikes=0, $listeCommentaires=NULL, $listeAlbums=NULL) {
+        $this->idImage = $idImage;
+        $this->idAuteur = $idAuteur;
+        $this->titre = $titre;
+        $this->nomAuteur = $nomAuteur;
+        $this->prenomAuteur = $prenomAuteur;
+        $this->nbLikes = $nbLikes;
+        $this->nbDislikes = $nbDislikes;
+        $this->listeCommentaires = $listeCommentaires;
+        $this->listeAlbums = $listeAlbums;
     }
 
-    public function getIsCensored()
+
+    //Getters
+    public function getIdImage()
     {
-        return $this->isCensored;
+        return $this->idImage;
     }
 
-    public function getName()
+    public function getIdAuteur()
     {
-        return $this->name;
+        return $this->idAuteur;
     }
 
-    public function getSize()
+    public function getNomAuteur()
     {
-        return $this->size;
+        return $this->nomAuteur;
     }
 
-    public function getStatus()
+    public function getPrenomAuteur()
     {
-        return $this->status;
+        return $this->prenomAuteur;
     }
 
-    public function getDescription()
+    public function getTitre()
     {
-        return $this->description;
+        return $this->titre;
     }
 
-    public function getAuthor()
+    function getNbLikes()
     {
-        return $this->author;
+        return $this->nbLikes;
     }
 
-    public function getDate()
+    public function getNbDislikes()
     {
-        return $this->date;
+        return $this->nbDislikes;
+    }
+
+    public function getListeCommentaires()
+    {
+        return $this->listeCommentaires;
+    }
+
+    public function getListeAlbums()
+    {
+        return $this->listeAlbums;
     }
 
 

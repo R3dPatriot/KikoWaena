@@ -3,35 +3,32 @@
 
 class Album
 {
-    private $photos;
-    private $title;
-    private $thumbnail;
-    private $author;
-    private $date;
+    //Attributes
+    private $id;
+    private $titre;
+    private  $idAuteur;
+    private $listePhotos;
 
-    public function getPhotos()
+    //Getters
+    public function getId()
     {
-        return $this->photos;
+        return $this->id;
     }
 
-    public function getTitle()
+    public function getTitre()
     {
-        return $this->title;
+        return $this->titre;
     }
 
-    public function getThumbnail()
+    public function getIdAuteur()
     {
-        return $this->thumbnail;
+        return $this->idAuteur;
     }
 
-    public function getAuthor()
+    public function getListePhotos()
     {
-        return $this->author;
+        return $this->listePhotos;
     }
 
-    public function getDate()
-    {
-        return $this->date;
-    }
 
 }
