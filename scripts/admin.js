@@ -9,5 +9,4 @@ function supprimer() {
 }
 
 function adminCallback(event) {
-
 }
