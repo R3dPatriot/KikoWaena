@@ -3,56 +3,61 @@
 
 class Photo
 {
-    //To enter on user input
-    private $path; //Check
-    private $name; //Check
-    private $description; //Nope
-    //Hidden for the user
-    private $author; //Hidden nope
-    private $date; //Hidden nope
-    private $size; //Useless
-    //For admin only
-    private $status;
-    private $isCensored;
+    //Attributes
+    private $idImage;
+    private  $idAuteur;
+    private $nomAuteur;
+    private $prenomAuteur;
+    private $titre;
+    private $nbLikes;
+    private $nbDislikes;
+    private $listeCommentaires;
+    private $listeAlbums;
 
-    public function getPath()
+    //Getters
+    public function getIdImage()
     {
-        return $this->path;
+        return $this->idImage;
     }
 
-    public function getIsCensored()
+    public function getIdAuteur()
     {
-        return $this->isCensored;
+        return $this->idAuteur;
     }
 
-    public function getName()
+    public function getNomAuteur()
     {
-        return $this->name;
+        return $this->nomAuteur;
     }
 
-    public function getSize()
+    public function getPrenomAuteur()
     {
-        return $this->size;
+        return $this->prenomAuteur;
     }
 
-    public function getStatus()
+    public function getTitre()
     {
-        return $this->status;
+        return $this->titre;
     }
 
-    public function getDescription()
+    function getNbLikes()
     {
-        return $this->description;
+        return $this->nbLikes;
     }
 
-    public function getAuthor()
+    public function getNbDislikes()
     {
-        return $this->author;
+        return $this->nbDislikes;
     }
 
-    public function getDate()
+    public function getListeCommentaires()
     {
-        return $this->date;
+        return $this->listeCommentaires;
+    }
+
+    public function getListeAlbums()
+    {
+        return $this->listeAlbums;
     }
 
 
