@@ -75,4 +75,54 @@ class Photo
     }
 
 
+    //Setters
+    public function setIdImage($idImage)
+    {
+        $this->idImage = $idImage;
+    }
+
+    public function setIdAuteur($idAuteur)
+    {
+        $this->idAuteur = $idAuteur;
+    }
+
+    public function setTitre($titre)
+    {
+        $this->titre = $titre;
+    }
+
+    public function setNomAuteur($nomAuteur)
+    {
+        $this->nomAuteur = $nomAuteur;
+    }
+
+    public function setPrenomAuteur($prenomAuteur)
+    {
+        $this->prenomAuteur = $prenomAuteur;
+    }
+
+    public function setNbLikes($nbLikes)
+    {
+        $this->nbLikes = $nbLikes;
+    }
+
+    public function setNbDislikes($nbDislikes)
+    {
+        $this->nbDislikes = $nbDislikes;
+    }
+
+    public function setListeCommentaires($listeCommentaires)
+    {
+        $this->listeCommentaires = $listeCommentaires;
+    }
+
+
+    public function setListeAlbums($listeAlbums)
+    {
+        $this->listeAlbums = $listeAlbums;
+    }
+
+
+
+
 }
