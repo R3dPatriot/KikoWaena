@@ -1,12 +1,18 @@
 'use strict';
 
+$('#accept').off('click').click(accepter);
+$('#delete').off('click').click(supprimer);
+
 function accepter() {
-    ajaxRequest('PUT', 'php/ajax/unreport.php', adminCallback);
+    let i = 3;
+    ajaxRequest('PUT', 'php/ajax/unreport.php/photo/' + i, adminCallback);
 }
 
 function supprimer() {
-    ajaxRequest('DELETE', 'php/ajax/unreport.php', adminCallback);
+    let i = 3;
+    ajaxRequest('DELETE', 'php/ajax/unreport.php/photo/' + i, adminCallback);
 }
 
-function adminCallback(event) {
+function adminCallback(responseText) {
+    console.log(responseText);
 }
