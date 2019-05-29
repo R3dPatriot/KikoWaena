@@ -1,3 +1,29 @@
+<?php
+
+require_once("../classes/Photo.php");
+
+
+$user_id = 420; //Get user ID here
+$number = 69; //Get the number of the photo here
+$destination = "../../users/".$user_id."/".$number;
+
+$title = $_POST['imageName'];
+
+if(isset($_POST['privacy'])) {
+    $private = true;
+} else {
+    $private = false;
+}
+
+$photo = new Photo($number, $user_id, $title);
+//here we can request the user from the database to add author name
+
+if (isset($_FILES['uploadedFile'])) {
+    move_uploaded_file($_FILES['uploadedFile'] ,$destination);
+    //alert
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,3 +67,5 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script
 </body>
 </html>
+
+
